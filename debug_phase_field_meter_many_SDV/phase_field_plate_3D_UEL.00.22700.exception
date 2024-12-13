@@ -1,0 +1,50 @@
+<Description>
+   ABAQUS/standard rank 0 encountered a SEGMENTATION FAULT
+
+</Description>
+
+<Context>
+   ELEMENT LOOP
+</Context>
+
+<Phase>
+   std
+</Phase>
+
+<Callstack>
+  1)  standardU.dll               uexternaldb                             
+  2)  ABQSMAStaCore.dll           openfs                                  
+  3)  ABQSMAStaCore.dll           std_main                                
+  4)  standard.exe              unknown                                 
+</Callstack>
+
+<Memory>
+   <Current>            1 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>          15 GB </Physical>
+   <Limit>             12 GB </Limit>
+   <Accessible>        15 GB </Accessible>
+   <Available>          3 GB </Available>
+   <Allocator>            DL </Allocator>
+</Memory>
+
+<Swap>
+       <Size>          31 GB </Size>
+       <Used>          26 GB </Used>
+       <Free>           5 GB </Free>
+</Swap>
+
+<Directories>
+  <current> C:\Users\nguyenb5\AppData\Local\Temp\nguyenb5_phase_field_plate_3D_UEL_9044 </current> <free>     18 GB </free>   <used>    456 GB </used> 
+    <indir> C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter_many_SDV </indir>   <free>     18 GB </free>  
+   <outdir> C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter_many_SDV </outdir>  <free>     18 GB </free> 
+   <tmpdir> C:\Users\nguyenb5\AppData\Local\Temp\nguyenb5_phase_field_plate_3D_UEL_9044 </tmpdir>  <free>     18 GB </free> 
+     <temp> C:\Users\nguyenb5\AppData\Local\Temp </temp>    <free>     18 GB </free>
+</Directories>
+
+<Installation>
+     <Version> 2023.HF4 6.23-5 </Version>
+       <Build> 2023_07_21-20.45.57 RELr425 183702 </Build>
+  <Executable> C:\Users\nguyenb5\AppData\Local\Temp\nguyenb5_phase_field_plate_3D_UEL_9044\standard.exe </Executable>
+</Installation>
+

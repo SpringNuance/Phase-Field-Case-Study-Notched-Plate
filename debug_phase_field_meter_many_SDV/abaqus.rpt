@@ -1,0 +1,41 @@
+********************************************************************************
+Probe Values Report, written on Wed Sep 11 15:55:16 2024
+
+Source
+-------
+
+   ODB: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_many_SDV/phase_field_plate_3D_UEL.odb
+   Step: Step-1
+   Frame: Increment      2: Step Time =   2.0000E+04
+   Variable: SDV_AR17_LODE
+
+Loc 1 : Integration point values
+
+Probe values reported at integration points
+
+  Part Instance  Element ID        Type  Attached nodes
+--------------------------------------------------------------------------------
+     PLATE-1      103255        C3D8        4474        4522        2892        2893        3555        2503        2423        2424
+     PLATE-1      103083        C3D8        2891        2892        4522        4519        2422        2423        2503        2500
+
+
+  Part Instance  Element ID        Type   Int. Pt.  SDV_AR17_LODE
+--------------------------------------------------------------------------------
+     PLATE-1      103255        C3D8          1        0.0
+     PLATE-1      103255        C3D8          2        1.0
+     PLATE-1      103255        C3D8          3        1.0
+     PLATE-1      103255        C3D8          4        0.0
+     PLATE-1      103255        C3D8          5        0.0
+     PLATE-1      103255        C3D8          6        1.0
+     PLATE-1      103255        C3D8          7        1.0
+     PLATE-1      103255        C3D8          8        0.0
+     PLATE-1      103083        C3D8          1        0.0
+     PLATE-1      103083        C3D8          2        1.0
+     PLATE-1      103083        C3D8          3        1.0
+     PLATE-1      103083        C3D8          4        0.0
+     PLATE-1      103083        C3D8          5        0.0
+     PLATE-1      103083        C3D8          6        1.0
+     PLATE-1      103083        C3D8          7        1.0
+     PLATE-1      103083        C3D8          8        0.0
+
+

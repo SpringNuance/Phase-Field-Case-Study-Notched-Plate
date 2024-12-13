@@ -1,0 +1,79 @@
+    ! Generally, any variable that contains the letter "j" means its datatype is integer
+    ! For example, "jelem" is the element number and "jtype" is the element type2, all in integer
+
+    ! rhs: An array containing the contributions of this element to the 
+    !      right-hand-side vectors of the overall system of equations
+
+    ! amatrx: An array containing the contribution of this element to the 
+    !         Jacobian (stiffness) or other matrix of the overall system of equations
+
+    ! svars: An array containing the values of the solution-dependent state variables 
+    !        associated with this element. The number of such variables is nsvars
+
+    ! props: A floating point array containing the nprops real property values 
+    !        defined for use with this element. nprops is the user-specified number 
+    !        of real property values. We usually use this only
+
+    ! jprops: An integer array containing the njprop integer property values 
+    !         defined for use with this element. njprop is the user-specified number 
+    !         of integer property values. We don't use this
+
+    ! coords: An array containing the original coordinates of the nodes of the element. 
+    !         coords(k1,k2) is the k1-th coordinate of the k2-th node of the element.
+
+    ! u, du, v, a: Arrays containing the current estimates of the basic solution 
+    !             variables (displacements, rotations, temperatures, 
+    !              depending on the degree of freedom) 
+    ! u(k1)	Total values of the variables
+    ! du(k1, 1)	Incremental values of the variables
+    ! v(k1)		Time rate of change of the variables (velocities, rate of rotations, etc)
+    ! a(k1)		Acceleartion of the variables (accelerations, angular accelerations, etc)
+    
+    ! time(1): Current value of step time or frequency.
+    ! time(2): Current value of total time.
+    ! dtime: time increment
+    ! ndofel: Number of degrees of freedom in the element.
+    !         this is equal to nnode x number of degree of freedom per node
+    !         For user element that resembles C3D8, ndofel = 8 nodes x 5 dof = 40
+    !         where 5 dof are ux, uy, yz (displacement), phi (crack phase field), CL (lattice hydrogen concentration)
+    
+    ! mlvarx: Dimensioning parameter used when several displacement or right-hand-side vectors are used.
+    ! nrhs: Number of load vectors. NRHS is 1 in most nonlinear problems: it is 2 for the modified Riks static procedure7
+    ! mcrd: It is the maximum of the user-defined maximum number of coordinates required at any node point 
+    !       and the value of the largest active degree of freedom of the user element 
+    !       that is less than or equal to 3. For example, if you specify that the 
+    !       maximum number of coordinates is 1 and the active degrees of freedom of 
+    !       the user element are 2, 3, and 6, MCRD will be 3. If you specify 
+    !       that the maximum number of coordinates is 2 and the active degrees of 
+    !       freedom of the user element are 11 and 12, MCRD will be 2
+
+    ! nnode: User-defined number of nodes on the element (defined in User Element section in input file in node flag)
+    ! jtype: Integer defining the element type. This is the user-defined integer value n in element type Un 
+    !        (defined in User Element section in input file in type=Un flag)
+    
+    ! jelem: Current user element number.
+
+    !     State variables  
+    !     nsvars(1:nsvint) - statev for first integration point
+    !     nsvars(nsvint+1:2*nsvint) - statev for second integration point
+    !     ...
+    !     nsvars((ninpt-1)*nsvint+1:ninpt*nsvint) - statev for last integration point
+    !     where 0, nsvint, 2*nsvint, ..., (ninpt-1)*nsvint are the starting indices of the state variables for each integration point
+    !     defined as nsvinc=(i-1)*nsvint where i is the integration point number (1 to ninpt)
+
+    !     Now for each integration point, the state variables are defined as follows: 
+    !     nsvars(1:6): stress tensor 11, 22, 33, 12, 13, 23  for first integration point     
+    !     nsvars(7:12) : strain tensor 11, 22, 33, 12, 13, 23  for first integration point
+    !     nsvars(13) : equivalent plastic strain PEEQ (eqplas) for first integration point
+    !     nsvars(14) : delta equivalent plastic strain PEEQ (deqplas) for first integration point
+    !     nsvars(15) : Crack Phase Field (ϕ) for first integration point
+    !     nsvars(16) : hydrostatic stress (σm) for first integration point
+    !     nsvars(17) : History variable field (H) for first integration point
+    !     nsvars(18) : Total hydrogen concentration (C) for first integration point
+    !     nsvars(19) : Hydrogen concentration in lattice sites (CL) for first integration point
+    !     nsvars(20) : Hydrogen concentration in trap sites (CT) for first integration point
+
+    !     nsvars(21:26): stress tensor 11, 22, 33, 12, 13, 23  for second integration point
+    !     ...
+    !     nsvars(39): Hydrogen concentration in trap sites (CT) for last integration point
+    !     and so on until nsvars(nsvint*ninpt) for the last integration point
