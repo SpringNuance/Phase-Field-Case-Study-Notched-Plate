@@ -1,0 +1,100 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2023.HF4 replay file
+# Internal Version: 2023_07_21-20.45.57 RELr425 183702
+# Run by nguyenb5 on Thu Sep  5 11:41:43 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=90.2552032470703, 
+    height=161.056716918945)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='phase_field_3D_millimeter_UEL.odb')
+#: Model: C:/LocalUserData/User-data/nguyenb5/phase_field_isotropic_3d/test_3D/phase_field_3D_millimeter_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       10
+#: Number of Node Sets:          8
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.17736, 
+    farPlane=3.63045, width=0.965004, height=0.537517, viewOffsetX=0.137282, 
+    viewOffsetY=-0.0901416)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.22191, 
+    farPlane=3.5859, width=0.657101, height=0.366012, viewOffsetX=0.212775, 
+    viewOffsetY=-0.123062)
+leaf = dgo.LeafFromElementSets(elementSets=(" ALL ELEMENTS", ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.remove(leaf=leaf)
+leaf = dgo.LeafFromElementSets(elementSets=(" ALL ELEMENTS", ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.add(leaf=leaf)
+leaf = dgo.LeafFromElementSets(elementSets=("PLATE-1.SOLID", ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.remove(leaf=leaf)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.1268, 
+    farPlane=3.68101, width=1.17254, height=0.653115, viewOffsetX=0.194482, 
+    viewOffsetY=-0.0673757)
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    visibleEdges=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.00513, 
+    farPlane=3.80268, width=1.92927, height=1.07462, viewOffsetX=0.292717, 
+    viewOffsetY=-0.0796734)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=HARMONIC)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=500 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.99858, 
+    farPlane=3.80944, width=1.93873, height=1.07989, viewOffsetX=0.292757, 
+    viewOffsetY=-0.0860805)
+session.imageAnimationOptions.setValues(vpDecorations=ON, vpBackground=OFF, 
+    compass=OFF, timeScale=1, frameRate=20)
+session.writeImageAnimation(fileName='PHI_evolution', format=AVI, 
+    canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR15_CL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].animationController.stop()
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.stop()
+session.viewports['Viewport: 1'].animationController.showFirstFrame()
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.imageAnimationOptions.setValues(vpDecorations=ON, vpBackground=OFF, 
+    compass=OFF)
+session.writeImageAnimation(fileName='CL_evolution', format=AVI, 
+    canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR14_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.imageAnimationOptions.setValues(vpDecorations=ON, vpBackground=OFF, 
+    compass=OFF)
+session.writeImageAnimation(fileName='sig_H_evolution', format=AVI, 
+    canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR1_SIG11', outputPosition=INTEGRATION_POINT, )

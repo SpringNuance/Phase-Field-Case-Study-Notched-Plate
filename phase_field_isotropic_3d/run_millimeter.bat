@@ -1,0 +1,3 @@
+python autoscript_millimeter.py
+cd simulation_results_millimeter
+abaqus job=phase_field_3D_millimeter_uel input=phase_field_3D_millimeter_uel.inp user=phase_field_combined cpus=1 verbose=1 memory=4096 interactive

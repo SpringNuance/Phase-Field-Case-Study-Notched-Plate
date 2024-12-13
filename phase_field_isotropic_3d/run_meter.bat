@@ -1,0 +1,3 @@
+python autoscript_meter.py
+cd simulation_results_meter
+abaqus job=phase_field_3D_meter_uel input=phase_field_3D_meter_uel.inp user=phase_field_combined cpus=2 verbose=1 memory=4096 interactive

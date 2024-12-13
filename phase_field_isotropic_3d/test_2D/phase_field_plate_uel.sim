@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- COPYRIGHT DASSAULT SYSTEMES 2009 -->
+<manifest>
+    <focusFile fileBinary="phase_field_plate_uel.simdir\phase_field_plate_uel.1.SMAFocus"/>
+    <publishIndex value="1"/>
+    <bulkFile bulkid="1" fileBinary="phase_field_plate_uel.6.SMABulk"/>
+</manifest>

@@ -1,0 +1,1 @@
+abaqus job=phase_field_plate_uel input=phase_field_plate_uel.inp user=phase_field cpus=2 -verbose 1 interactive

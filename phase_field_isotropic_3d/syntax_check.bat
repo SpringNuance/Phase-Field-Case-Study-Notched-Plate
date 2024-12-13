@@ -1,0 +1,3 @@
+cd simulation_results
+abaqus syntaxcheck job=phase_field_plate_3D_UEL
+abaqus datacheck job=phase_field_plate_3D_UEL
