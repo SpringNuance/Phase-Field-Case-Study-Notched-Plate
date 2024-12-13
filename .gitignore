@@ -1,0 +1,6 @@
+# Ignore all .prt files
+*.prt
+# Ignore all .stt files
+*.stt
+# Ignore all .odb files
+*.odb
