@@ -1,0 +1,423 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2023.HF4 replay file
+# Internal Version: 2023_07_21-20.45.57 RELr425 183702
+# Run by nguyenb5 on Wed Sep  4 17:44:02 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+#: Warning: Permission was denied for "abaqus.rpy"; "abaqus.rpy.2" will be used for this session's replay file.
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=90.2552032470703, 
+    height=146.76042175293)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('damage_model_3D.cae')
+#: The model database "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-2D'].parts['plate']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-2D'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-3D-m'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-3D-m'].parts['plate']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+elemType1 = mesh.ElemType(elemCode=C3D8, elemLibrary=STANDARD, 
+    secondOrderAccuracy=OFF, distortionControl=DEFAULT)
+elemType2 = mesh.ElemType(elemCode=C3D6, elemLibrary=STANDARD)
+elemType3 = mesh.ElemType(elemCode=C3D4, elemLibrary=STANDARD)
+p = mdb.models['Model-3D-m'].parts['plate']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#f ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+a = mdb.models['Model-3D-m'].rootAssembly
+a.regenerate()
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+a = mdb.models['Model-3D-mm'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+mdb.models.changeKey(fromName='Model-3D-mm', toName='Model-3D-mm-ref')
+a = mdb.models['Model-3D-mm-ref'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Model-2D'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.models.changeKey(fromName='Model-2D', toName='Model-2D-ref')
+a = mdb.models['Model-2D-ref'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Model-3D-m'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(maxNumInc=10000000, 
+    timeIncrementationMethod=FIXED, initialInc=10000.0, deltmx=None, 
+    cetol=None, creepIntegration=None, amplitude=STEP)
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['phase_field_plate_3D'].writeInput(consistencyChecking=OFF)
+#: The job input file has been written to "phase_field_plate_3D.inp".
+import os
+os.chdir(r"C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter")
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(creepIntegration=None, 
+    amplitude=RAMP)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['phase_field_plate_3D'].writeInput(consistencyChecking=OFF)
+#: The job input file has been written to "phase_field_plate_3D.inp".
+mdb.jobs['phase_field_plate_3D'].writeInput(consistencyChecking=OFF)
+#: The job input file has been written to "phase_field_plate_3D.inp".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(timePeriod=1000000.0, 
+    creepIntegration=None)
+mdb.models['Model-3D-m'].amplitudes['Amp-1'].setValues(timeSpan=STEP, 
+    smooth=SOLVER_DEFAULT, data=((0.0, 1.0), (1000000.0, 1.0)))
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.jobs['phase_field_plate_3D'].writeInput(consistencyChecking=OFF)
+#: The job input file has been written to "phase_field_plate_3D.inp".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(maxNumInc=1000000, 
+    creepIntegration=None)
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(timePeriod=10000000.0, 
+    creepIntegration=None)
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.jobs['phase_field_plate_3D'].writeInput(consistencyChecking=OFF)
+#: The job input file has been written to "phase_field_plate_3D.inp".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00209909, 
+    farPlane=0.00371698, width=0.00139608, height=0.000732549, 
+    viewOffsetX=-0.000143979, viewOffsetY=0.000297469)
+del mdb.models['Model-3D-m'].boundaryConditions['BC-1']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00215054, 
+    farPlane=0.00366553, width=0.00120754, height=0.00063362, 
+    viewOffsetX=5.53222e-05, viewOffsetY=0.000229087)
+a = mdb.models['Model-3D-m'].rootAssembly
+region = a.sets['top_side']
+mdb.models['Model-3D-m'].DisplacementBC(name='BC-1', createStepName='Initial', 
+    region=region, u1=SET, u2=SET, u3=SET, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, distributionType=UNIFORM, fieldName='', localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00210587, 
+    farPlane=0.0037102, width=0.00151452, height=0.000794697, 
+    viewOffsetX=0.000157125, viewOffsetY=0.000199661)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+del mdb.models['Model-3D-m'].boundaryConditions['BC-1']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.0019851, 
+    farPlane=0.00383097, width=0.00234209, height=0.00122894, 
+    viewOffsetX=4.66408e-05, viewOffsetY=1.62666e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00213395, 
+    farPlane=0.00353937, width=0.00251771, height=0.00132109, cameraPosition=(
+    0.000298056, -0.00165358, 0.0022957), cameraUpVector=(0.301326, 0.930462, 
+    0.208432), cameraTarget=(-7.50866e-06, 1.61053e-05, -6.55438e-05), 
+    viewOffsetX=5.01382e-05, viewOffsetY=1.74864e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00189078, 
+    farPlane=0.00384529, width=0.00223081, height=0.00117055, cameraPosition=(
+    0.000884351, -0.00251744, 0.00106375), cameraUpVector=(-0.247936, 0.626361, 
+    0.739053), cameraTarget=(-1.08116e-05, 8.40002e-06, -6.56439e-05), 
+    viewOffsetX=4.44248e-05, viewOffsetY=1.54938e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00214905, 
+    farPlane=0.00358703, width=0.000782525, height=0.000410606, 
+    viewOffsetX=-0.000170926, viewOffsetY=-3.61365e-05)
+a = mdb.models['Model-3D-m'].rootAssembly
+region = a.sets['bottom_side']
+mdb.models['Model-3D-m'].DisplacementBC(name='BC-6', createStepName='Initial', 
+    region=region, u1=SET, u2=SET, u3=SET, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, distributionType=UNIFORM, fieldName='', localCsys=None)
+mdb.models['Model-3D-m'].boundaryConditions.changeKey(fromName='BC-6', 
+    toName='BC-1')
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['phase_field_plate_3D'].writeInput(consistencyChecking=OFF)
+#: The job input file has been written to "phase_field_plate_3D.inp".
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00217356, 
+    farPlane=0.00364248, width=0.000933624, height=0.000489891, 
+    viewOffsetX=-0.000115156, viewOffsetY=0.000278606)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RM1', outputPosition=NODAL, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb'].close(
+    )
+mdb.save()
+#: The model database has been saved to "C:\LocalUserData\User-data\nguyenb5\debug_phase_field_meter\damage_model_3D.cae".
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=84 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00226722, 
+    farPlane=0.00354841, width=0.000397166, height=0.000208401, 
+    viewOffsetX=-4.90861e-05, viewOffsetY=1.65467e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=83 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=82 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=81 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=80 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00223734, 
+    farPlane=0.00357833, width=0.000811604, height=0.000425864, 
+    viewOffsetX=-7.99312e-05, viewOffsetY=5.1832e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00210041, 
+    farPlane=0.00371561, width=0.00139414, height=0.000731535, 
+    viewOffsetX=-0.000110505, viewOffsetY=7.83291e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR15_CL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228816, 
+    farPlane=0.0035279, width=0.000225955, height=0.000118563, 
+    viewOffsetX=-3.13591e-05, viewOffsetY=8.29075e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR15_CL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR14_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb'].close(
+    )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00226955, 
+    farPlane=0.00354649, width=0.000340497, height=0.000178666, 
+    viewOffsetX=-1.93549e-05, viewOffsetY=-2.83594e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb'].close(
+    )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+#: Warning: The output database 'C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+#: Warning: The output database 'C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR1_SIG11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229566, 
+    farPlane=0.00352032, width=0.000190578, height=0.0001, 
+    viewOffsetX=-2.72417e-05, viewOffsetY=2.86795e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
