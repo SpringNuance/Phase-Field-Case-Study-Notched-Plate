@@ -1,0 +1,809 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2023.HF4 replay file
+# Internal Version: 2023_07_21-20.45.57 RELr425 183702
+# Run by nguyenb5 on Tue Sep 17 15:49:48 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=90.2552032470703, 
+    height=132.6875)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='phase_field_plate_3D_UEL.odb')
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_EQPLAS', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227671, 
+    farPlane=0.00353912, width=0.000332871, height=0.000155854, 
+    viewOffsetX=0.000218766, viewOffsetY=-0.000155932)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR18_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227836, 
+    farPlane=0.00353747, width=0.000321075, height=0.000150331, 
+    viewOffsetX=3.80738e-05, viewOffsetY=-3.19481e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=48 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=49 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=50 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=51 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=52 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=115 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=116 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=116 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=139 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00215668, 
+    farPlane=0.00365866, width=0.00115905, height=0.000542681, 
+    viewOffsetX=0.000101405, viewOffsetY=3.87889e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=142 )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00224534, 
+    farPlane=0.0035698, width=0.000483538, height=0.000226398, 
+    viewOffsetX=6.06817e-06, viewOffsetY=2.50696e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR18_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229119, 
+    farPlane=0.00352395, width=0.000213579, height=0.0001, 
+    viewOffsetX=-1.54824e-05, viewOffsetY=3.18041e-07)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=181 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=182 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=182 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=182 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=182 )
+#: Warning: The output database 'C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00216332, 
+    farPlane=0.00365181, width=0.000990723, height=0.000463868, 
+    viewOffsetX=1.56074e-05, viewOffsetY=-8.28067e-05)
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00210164, 
+    farPlane=0.00371419, width=0.0013785, height=0.000645428, 
+    viewOffsetX=4.84838e-05, viewOffsetY=-3.00157e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR18_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228022, 
+    farPlane=0.00353561, width=0.000273268, height=0.000127947, 
+    viewOffsetX=-2.98209e-05, viewOffsetY=-1.26122e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb'].close(
+    )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR18_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00225437, 
+    farPlane=0.00356142, width=0.000487468, height=0.000228238, 
+    viewOffsetX=-1.4028e-06, viewOffsetY=-1.12962e-05)
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb'].close(
+    )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR1_SIG11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR7_EELAS11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_EPLAS11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR19_EQPLAS', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR20_DEQPLAS', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR22_SIG_VONMISES', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227631, 
+    farPlane=0.00353973, width=0.000298815, height=0.000139909, 
+    viewOffsetX=-5.52078e-05, viewOffsetY=-1.84663e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb'].close(
+    )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR1_SIG11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228187, 
+    farPlane=0.00353419, width=0.000264677, height=0.000123925, 
+    viewOffsetX=-2.23084e-05, viewOffsetY=5.70339e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR2_SIG22', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR3_SIG33', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR4_SIG12', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR7_EELAS11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR13_EPLAS11', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR19_EQPLAS', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR20_DEQPLAS', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=21 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR22_SIG_VONMISES', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228537, 
+    farPlane=0.0035306, width=0.000273867, height=0.000128227, 
+    viewOffsetX=-2.22371e-05, viewOffsetY=5.82243e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR23_TRIAX', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR24_LODE', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228552, 
+    farPlane=0.00353044, width=0.00027277, height=0.000127714, 
+    viewOffsetX=-3.29842e-05, viewOffsetY=7.25972e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229211, 
+    farPlane=0.00352385, width=0.000213579, height=0.0001, 
+    viewOffsetX=-3.14073e-05, viewOffsetY=4.59079e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR26_HISTORY', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR27_GC', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228456, 
+    farPlane=0.0035314, width=0.000247495, height=0.00011588, 
+    viewOffsetX=-3.13536e-05, viewOffsetY=1.72604e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR29_CL_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229211, 
+    farPlane=0.00352385, width=0.000213579, height=0.0001, 
+    viewOffsetX=-3.02676e-05, viewOffsetY=1.02331e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR30_CT_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR29_CL_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227452, 
+    farPlane=0.00354144, width=0.000400199, height=0.000187378, 
+    viewOffsetX=9.58746e-07, viewOffsetY=2.9359e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=22 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=25 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=26 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=29 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=78 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00226811, 
+    farPlane=0.00354756, width=0.000628478, height=0.000294261, 
+    viewOffsetX=-7.40433e-06, viewOffsetY=2.47703e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR30_CT_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00225445, 
+    farPlane=0.00356121, width=0.000430957, height=0.000201779, 
+    viewOffsetX=-1.50256e-05, viewOffsetY=1.74964e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=81 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=81 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=81 )
+#: Warning: The output database 'C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229001, 
+    farPlane=0.00352593, width=0.00025796, height=0.00012078, 
+    viewOffsetX=-6.61814e-06, viewOffsetY=-8.14428e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=21 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=22 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=25 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=26 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=29 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229206, 
+    farPlane=0.00352385, width=0.000213579, height=0.0001, 
+    viewOffsetX=-1.39256e-05, viewOffsetY=-6.31098e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=31 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=32 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=33 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=34 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=35 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=36 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=37 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=38 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR22_SIG_VONMISES', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=41 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=42 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=43 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=43 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=42 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=43 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=45 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=46 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=48 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=49 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=50 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=51 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=52 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=53 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=54 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=55 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=56 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=57 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=58 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=59 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=60 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=61 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=62 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=63 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=64 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=65 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=66 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=67 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=68 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=69 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=70 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=70 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=70 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=70 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=70 )
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=-4.36946e-05, 
+    viewOffsetY=-3.93015e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=71 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=72 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=73 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=74 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=75 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=75 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=75 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=75 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=75 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=75 )
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=-3.23192e-05, 
+    viewOffsetY=-1.58428e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=76 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227893, 
+    farPlane=0.00353674, width=0.000464508, height=0.000217488, 
+    viewOffsetX=-1.65673e-05, viewOffsetY=6.13843e-07)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR26_HISTORY', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229179, 
+    farPlane=0.00352388, width=0.000213579, height=0.0001, 
+    viewOffsetX=-2.53781e-05, viewOffsetY=-1.27739e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR27_GC', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00222947, 
+    farPlane=0.00358621, width=0.000585219, height=0.000274006, 
+    viewOffsetX=-3.66119e-05, viewOffsetY=-2.3869e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR29_CL_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=78 )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228818, 
+    farPlane=0.00352727, width=0.000220445, height=0.000103215, 
+    viewOffsetX=-2.75316e-05, viewOffsetY=9.19605e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227432, 
+    farPlane=0.00354113, width=0.000345166, height=0.000161611, 
+    viewOffsetX=-2.85498e-05, viewOffsetY=2.51251e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227363, 
+    farPlane=0.00354183, width=0.000310094, height=0.00014519, 
+    viewOffsetX=-1.43731e-05, viewOffsetY=1.58522e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR22_SIG_VONMISES', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00225699, 
+    farPlane=0.00355846, width=0.000497074, height=0.000232736, 
+    viewOffsetX=-1.62181e-05, viewOffsetY=1.37199e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00225259, 
+    farPlane=0.00356286, width=0.000439748, height=0.000205895, 
+    viewOffsetX=-2.51425e-05, viewOffsetY=3.19232e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR19_EQPLAS', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229135, 
+    farPlane=0.0035241, width=0.000213579, height=0.0001, 
+    viewOffsetX=-9.55437e-06, viewOffsetY=-2.43162e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR21_SIG_H', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR22_SIG_VONMISES', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00228213, 
+    farPlane=0.00353332, width=0.000291032, height=0.000136264, 
+    viewOffsetX=-4.32272e-06, viewOffsetY=-2.90623e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR23_TRIAX', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR24_LODE', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229135, 
+    farPlane=0.0035241, width=0.000213579, height=0.0001, 
+    viewOffsetX=-1.2367e-05, viewOffsetY=-4.07162e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=154 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=155 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=156 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=157 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=158 )
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=-3.24057e-05, 
+    viewOffsetY=-8.67007e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=159 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=160 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=161 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=162 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=163 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=164 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=165 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=166 )
+session.viewports['Viewport: 1'].view.setValues(width=0.000213579, 
+    height=0.0001, viewOffsetX=-2.52692e-05, viewOffsetY=-1.43101e-05)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227554, 
+    farPlane=0.00353997, width=0.00029779, height=0.000139429, 
+    viewOffsetX=-4.11236e-06, viewOffsetY=-1.96834e-06)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR29_CL_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR30_CT_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR29_CL_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR28_C_MOL', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR26_HISTORY', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00223128, 
+    farPlane=0.00358423, width=0.000641288, height=0.000300258, 
+    viewOffsetX=-2.79032e-05, viewOffsetY=-2.68308e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=167 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=168 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=169 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=170 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.0022866, 
+    farPlane=0.00352891, width=0.000229545, height=0.000107476, 
+    viewOffsetX=-3.73848e-05, viewOffsetY=1.83737e-07)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229003, 
+    farPlane=0.003526, width=0.00021425, height=0.000100314, 
+    viewOffsetX=0.000212297, viewOffsetY=-0.000467035)
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb'].close(
+    )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00226648, 
+    farPlane=0.00354939, width=0.000358212, height=0.000167719, 
+    viewOffsetX=-1.83413e-05, viewOffsetY=-5.93774e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=77 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229179, 
+    farPlane=0.00352388, width=0.000213579, height=0.0001, 
+    viewOffsetX=-1.1757e-05, viewOffsetY=-1.72087e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=78 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=79 )
+o1 = session.openOdb(
+    name='C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       9
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00215661, 
+    farPlane=0.00365936, width=0.00103814, height=0.00048607, 
+    viewOffsetX=1.62698e-06, viewOffsetY=-8.07373e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV_AR25_PHI', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00227857, 
+    farPlane=0.00353693, width=0.000281165, height=0.000131645, 
+    viewOffsetX=-2.27521e-05, viewOffsetY=-5.95448e-07)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229108, 
+    farPlane=0.00352396, width=0.000213579, height=0.0001, 
+    viewOffsetX=-2.34514e-05, viewOffsetY=6.50622e-07)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=21 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=22 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=22 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=21 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=21 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=22 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00223504, 
+    farPlane=0.00357979, width=0.00054496, height=0.000255157, 
+    viewOffsetX=-4.6201e-05, viewOffsetY=-9.69744e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00229067, 
+    farPlane=0.003524, width=0.000213579, height=0.0001, 
+    viewOffsetX=-3.7126e-05, viewOffsetY=-5.34348e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00221845, 
+    farPlane=0.00359617, width=0.000646016, height=0.000302472, 
+    viewOffsetX=-0.000116233, viewOffsetY=-5.12629e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=45 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00213989, 
+    farPlane=0.00367288, width=0.00112195, height=0.000525311, 
+    viewOffsetX=0.000138535, viewOffsetY=-8.43918e-05)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=46 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=54 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=54 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.00224307, 
+    farPlane=0.00356887, width=0.000478414, height=0.000223999, 
+    viewOffsetX=5.93359e-05, viewOffsetY=-9.53368e-05)
+session.odbs['C:/LocalUserData/User-data/nguyenb5/debug_phase_field_meter_plasticity/phase_field_plate_3D_UEL.odb'].close(
+    )

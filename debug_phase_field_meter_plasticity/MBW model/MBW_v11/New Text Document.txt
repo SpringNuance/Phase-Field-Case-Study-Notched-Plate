@@ -1,0 +1,30 @@
+c SDV1:  Equivalent plastic strain                                                 c
+c SDV2:  Equivalent stress                                                         c
+c SDV3:  Temperature                                                               c
+c SDV4:  Temperature softening factor                                              c
+c SDV5:  Strain rate                                                               c
+c SDV6:  Strain rate multipler factor                                              c
+c SDV7:  Strain rate addition factor                                               c
+c SDV8:  Strain rate: accumulation number                                          c
+c SDV9:  Strain rate: strain accumulation                                          c
+c SDV10: Strain rate: time accumulation                                            c
+c SDV11: Strain rate: averaged strain increment                                    c
+c SDV12: Strain rate at real time step                                             c
+c SDV13: Cleavage fracture indicator                                               c
+c SDV14: Cleavage fracture stress criterion indicator                              c
+c SDV15: Cleavage fracture strain criterion indicator                              c
+c SDV16: Ductile damage initiation indicator                                       c
+c SDV17: Ductile fracture indicator                                                c
+c SDV18: Damage variable                                                           c
+c SDV19: Von Mises equivalent stress                                               c
+c SDV20: Stress triaxiality                                                        c
+c SDV21: Lode angle                                                                c
+c SDV22: Normalized Lode angle                                                     c
+c SDV23: Cleavage fracture initiation strain                                       c
+c SDV24: Ductile fracture initiation strain                                        c
+c SDV25: Critical ductile damage variable                                          c
+c SDV26: Maximal principal stress                                                  c
+c SDV27: Ductile damage initiation stress                                          c
+c SDV28: Ductile damage initiation strain                                          c
+c SDV29: Element deletion flag                                                     c
+c SDV30: Element deletion
