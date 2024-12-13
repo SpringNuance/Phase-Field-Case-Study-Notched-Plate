@@ -1,0 +1,238 @@
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].rootAssembly.deleteSets(setNames=('Set-10', 'Set-6', 
+    'Set-7', 'Set-8', 'Set-9'))
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(deltmx=10.0)
+mdb.models['Model-3D-m'].fieldOutputRequests['F-Output-1'].setValues(variables=
+    ('U', 'RF', 'NT', 'SDV'))
+del mdb.models['Model-3D-m'].historyOutputRequests['H-Output-1']
+del mdb.models['Model-3D-m'].historyOutputRequests['H-Output-2']
+mdb.models['Model-3D-m'].predefinedFields['Predefined Field-1'].setValues(
+    region=mdb.models['Model-3D-m'].rootAssembly.sets['whole_plate'])
+# Save by nguyenb5 on 2024_09_04-15.18.43; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+# Save by nguyenb5 on 2024_09_04-15.19.15; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+# Save by nguyenb5 on 2024_09_04-15.26.44; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].parts['plate'].setElementType(elemTypes=(ElemType(
+    elemCode=C3D8, elemLibrary=STANDARD, secondOrderAccuracy=OFF, 
+    distortionControl=DEFAULT), ElemType(elemCode=C3D6, elemLibrary=STANDARD), 
+    ElemType(elemCode=C3D4, elemLibrary=STANDARD)), regions=(
+    mdb.models['Model-3D-m'].parts['plate'].cells.getSequenceFromMask(('[#f ]', 
+    ), ), ))
+# Save by nguyenb5 on 2024_09_04-17.44.40; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].rootAssembly.regenerate()
+mdb.models.changeKey(fromName='Model-3D-mm', toName='Model-3D-mm-ref')
+mdb.models.changeKey(fromName='Model-2D', toName='Model-2D-ref')
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(amplitude=STEP, cetol=None, 
+    creepIntegration=None, deltmx=None, initialInc=10000.0, maxNumInc=10000000, 
+    timeIncrementationMethod=FIXED)
+# Save by nguyenb5 on 2024_09_04-17.46.43; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+# Save by nguyenb5 on 2024_09_04-17.47.24; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(amplitude=RAMP, 
+    creepIntegration=None)
+# Save by nguyenb5 on 2024_09_04-17.51.02; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(creepIntegration=None, 
+    timePeriod=1000000.0)
+mdb.models['Model-3D-m'].amplitudes['Amp-1'].setValues(data=((0.0, 1.0), (
+    1000000.0, 1.0)), smooth=SOLVER_DEFAULT, timeSpan=STEP)
+# Save by nguyenb5 on 2024_09_04-17.53.22; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(creepIntegration=None, 
+    maxNumInc=1000000)
+# Save by nguyenb5 on 2024_09_04-17.53.51; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].steps['Step-1'].setValues(creepIntegration=None, 
+    timePeriod=10000000.0)
+# Save by nguyenb5 on 2024_09_04-17.54.12; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-3D-m'].boundaryConditions['BC-1']
+mdb.models['Model-3D-m'].DisplacementBC(amplitude=UNSET, createStepName=
+    'Initial', distributionType=UNIFORM, fieldName='', localCsys=None, name=
+    'BC-1', region=mdb.models['Model-3D-m'].rootAssembly.sets['top_side'], u1=
+    SET, u2=SET, u3=SET, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+del mdb.models['Model-3D-m'].boundaryConditions['BC-1']
+mdb.models['Model-3D-m'].DisplacementBC(amplitude=UNSET, createStepName=
+    'Initial', distributionType=UNIFORM, fieldName='', localCsys=None, name=
+    'BC-6', region=mdb.models['Model-3D-m'].rootAssembly.sets['bottom_side'], 
+    u1=SET, u2=SET, u3=SET, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.models['Model-3D-m'].boundaryConditions.changeKey(fromName='BC-6', toName=
+    'BC-1')
+# Save by nguyenb5 on 2024_09_04-17.58.13; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+# Save by nguyenb5 on 2024_09_04-18.01.24; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].materials['user_material'].depvar.setValues(n=20)
+mdb.models['Model-3D-m'].materials['user_material'].UserOutputVariables(n=6)
+# Save by nguyenb5 on 2024_09_04-21.01.02; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-3D-m'].fieldOutputRequests['F-Output-1'].setValues(variables=
+    ('U', 'RF', 'SDV', 'UVARM'))
+# Save by nguyenb5 on 2024_09_04-21.04.05; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='Model-3D-m-mol', objectToCopy=mdb.models['Model-3D-m'])
+mdb.models['Model-3D-m-mol'].boundaryConditions['BC-3'].setValues(magnitude=
+    3.919)
+mdb.models['Model-3D-m-mol'].boundaryConditions['BC-4'].setValues(magnitude=
+    3.919)
+mdb.models['Model-3D-m-mol'].boundaryConditions['BC-5'].setValues(magnitude=
+    3.919)
+mdb.models['Model-3D-m-mol'].predefinedFields['Predefined Field-1'].setValues(
+    magnitudes=(3.919, ))
+# Save by nguyenb5 on 2024_09_04-21.41.31; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-3D-m-mol', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-2', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=
+    ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, 
+    waitMinutes=0)
+del mdb.jobs['phase_field_plate_3D']
+mdb.jobs.changeKey(fromName='Job-2', toName='phase_field_plate_3D')
+mdb.models['Model-3D-m-mol'].materials['user_material'].depvar.setValues(n=32)
+# Save by nguyenb5 on 2024_09_04-22.03.43; build 2023.HF4 2023_07_21-20.45.57 RELr425 183702

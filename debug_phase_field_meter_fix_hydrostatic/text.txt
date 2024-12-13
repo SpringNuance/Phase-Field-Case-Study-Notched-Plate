@@ -1,0 +1,9 @@
+H concentration
+inc3: 5.076e-1
+inc5: 5.153e-1
+RF
+inc3: 2.039e-03
+inc5: 3.398e-03
+phi
+inc3: 1.555e-05
+inc5: 6.224e-05
